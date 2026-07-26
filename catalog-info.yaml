@@ -1,0 +1,41 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: zammad
+  title: Zammad Helpdesk
+  description: >-
+    AGM's helpdesk/customer support ticketing system. Fork of the upstream
+    zammad/zammad open-source project (kept as a vanilla, unmodified mirror
+    via automated updatecli dependency bumps — no AGM-specific code changes).
+    Handles email, chat, and CTI-driven ticketing; the CTI channel is fed by
+    the 3cx-zammad-bridge daemon, which forwards call events from 3CX.
+  tags:
+    - ruby
+    - rails
+    - helpdesk
+    - ticketing
+    - customer-support
+  links:
+    - url: https://zammad.agmegypt.com
+      title: Zammad (live instance)
+      icon: dashboard
+    - url: https://docs.zammad.org
+      title: Upstream Zammad documentation
+      icon: docs
+    - url: https://github.com/AGM-One-Vision/zammad
+      title: Source (AGM fork)
+      icon: github
+    - url: https://github.com/zammad/zammad
+      title: Upstream repository
+      icon: github
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: AGM-One-Vision/zammad
+    devhub.agm/origin: forked-oss
+    devhub.agm/upstream-repo: https://github.com/zammad/zammad
+    devhub.agm/visibility: internal
+spec:
+  type: service
+  lifecycle: production
+  owner: group:default/dto
+  system: system:default/zammad
