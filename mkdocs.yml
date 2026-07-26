@@ -1,0 +1,7 @@
+site_name: Zammad Helpdesk (AGM)
+nav:
+  - Overview: index.md
+  - Deployment: deployment.md
+  - 3CX Integration: 3cx-integration.md
+plugins:
+  - techdocs-core
